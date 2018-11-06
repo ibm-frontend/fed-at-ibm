@@ -1,0 +1,9 @@
+applications:
+  - name: fed-at-ibm-staging-new
+    buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+    command: npm run start:prod
+    memory: 512M
+    routes:
+      - route: fed-at-ibm-staging.mybluemix.net
+    env:
+      CONTENTFUL_PREVIEW: true

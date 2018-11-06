@@ -1,0 +1,50 @@
+{
+  "name": "fed-at-ibm",
+  "version": "1.0.0",
+  "description": "Public home for IBM’s front-end development community.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.11.3"
+  },
+  "dependencies": {
+    "@ibm/plex": "^1.2.1",
+    "@zeit/next-css": "^1.0.1",
+    "apicache": "^1.2.3",
+    "compression": "^1.7.3",
+    "contentful": "^7.0.5",
+    "express": "^4.16.4",
+    "file-loader": "^2.0.0",
+    "geopattern": "^1.2.3",
+    "grid-in-js": "^0.1.2",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^7.0.2",
+    "next-offline": "^3.0.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-markdown": "^4.0.3",
+    "styled-components": "^4.0.3",
+    "url-loader": "^1.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ibm-frontend/fed-at-ibm.git"
+  },
+  "scripts": {
+    "build": "next build",
+    "cloud:login": "cf login -a api.ng.bluemix.net -o IBMDesignOrg -s fed-dallas",
+    "cloud:push": "cf push -f manifest-staging.yml && cf delete fed-at-ibm-staging -f && cf rename fed-at-ibm-staging-new fed-at-ibm-staging",
+    "cloud:push:prod": "cf push -f manifest-prod.yml && cf delete fed-at-ibm -f && cf rename fed-at-ibm-new fed-at-ibm",
+    "deploy": "npm run build && npm run cloud:login && npm run cloud:push",
+    "deploy:prod": "npm run build && npm run cloud:login && npm run cloud:push:prod",
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 nodemon -w server/**/* server/index.js",
+    "start": "npm run dev",
+    "start:prod": "NODE_ENV=production node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED"
+}
