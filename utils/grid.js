@@ -1,4 +1,4 @@
-import gridInJS from "grid-in-js";
+import gridWiz from "grid-wiz";
 
 export const grid = {
   breakpoints: [
@@ -50,4 +50,4 @@ export const breakpoints = grid.breakpoints.reduce((result, item) => {
   return result;
 }, {});
 
-export default gridInJS(grid);
+export default gridWiz(grid);

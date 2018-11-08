@@ -15,7 +15,7 @@
     "express": "^4.16.4",
     "file-loader": "^2.0.0",
     "geopattern": "^1.2.3",
-    "grid-in-js": "^0.1.2",
+    "grid-wiz": "^1.0.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
     "next-offline": "^3.0.4",
