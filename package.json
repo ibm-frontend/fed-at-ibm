@@ -15,7 +15,7 @@
     "express": "^4.16.4",
     "file-loader": "^2.0.0",
     "geopattern": "^1.2.3",
-    "grid-wiz": "^1.0.0",
+    "grid-wiz": "1.0.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
     "next-offline": "^3.0.4",
@@ -27,7 +27,7 @@
     "url-loader": "^1.1.2"
   },
   "devDependencies": {
-    "nodemon": "^1.18.5"
+    "nodemon": "^1.18.9"
   },
   "repository": {
     "type": "git",

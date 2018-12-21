@@ -15,7 +15,7 @@ function dateConverter(datetime) {
     "Dec"
   ];
   const year = date[0];
-  const month = months[parseInt(date[1])];
+  const month = months[parseInt(date[1]-1)];
   const day = date[2];
   const time = `${month} ${day}, ${year}`;
   return time;
