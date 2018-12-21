@@ -1,6 +1,7 @@
 applications:
   - name: fed-at-ibm-new
-    buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+    buildpacks: 
+    - https://github.com/cloudfoundry/nodejs-buildpack
     command: npm run start:prod
     memory: 512M
     instances: 2
