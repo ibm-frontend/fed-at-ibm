@@ -2,3 +2,5 @@
 .next
 ibmcloudapikey
 node_modules
+.DS_Store
+static/.DS_Store
